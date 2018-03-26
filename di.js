@@ -9,16 +9,13 @@ NOTE: There is no need to touch anything else but implementing inject method, al
 do whatever you want to let the program output the expected result.
 */
 const deps = {
-    foo: () = > {
-    console.log('foo');
-},
-bar: () =
->
-{
-    console.log('bar');
-}
-}
-;
+    foo: () => {
+        console.log('foo');
+    },
+    bar: () => {
+        console.log('bar');
+    }
+};
 
 
 class Injector {
@@ -35,20 +32,17 @@ class Injector {
             }
         }
 
-        return func.bind(this,...args
-    )
-        ;
+        return func.bind(this, ...args);
     }
 }
 
 
 const injector = new Injector(deps);
 
-const dependant = injector.inject((foo, bar) = > {
+const dependant = injector.inject((foo, bar) => {
     foo();
-bar();
-})
-;
+    bar();
+});
 
 
 dependant();
