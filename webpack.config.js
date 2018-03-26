@@ -12,7 +12,8 @@ const config = {
     devtool: "source-map",
     module: {
         rules: [
-            {test: /\.jsx?/, use: "babel-loader", exclude: /node_modules/}
+            {test: /\.jsx?/, use: "babel-loader", exclude: /node_modules/},
+            {test: /\.html$/, loader: 'raw-loader'}
         ]
     },
     plugins: [
