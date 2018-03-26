@@ -1,0 +1,7 @@
+<div class="app-component-wrapper">
+    <ul ng-if="$ctrl.catalogsList">
+        <li ng-repeat="catalog in $ctrl.catalogsList">
+            <pre ng-bind="catalog | json"></pre>
+        </li>
+    </ul>
+</div>

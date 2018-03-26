@@ -1,8 +1,14 @@
 import angular from "angular";
-/** modules */
-import "./base";
+/** styles */
+import './assets/styles/main.scss';
+/** components */
+import appComponent from "./components/app/app.component";
+/** services */
+import catalogsList from "./services/catalogs-list/catalogs-list.factory";
 
-angular.module("app", ["app.base"])
+angular.module("app", [])
+    .component("app", appComponent)
+    .factory("catalogsList", catalogsList)
     .config(["$httpProvider", ($httpProvider) => {
         $httpProvider.defaults.headers.common["Accept-Language"] = "ru";
     }]);

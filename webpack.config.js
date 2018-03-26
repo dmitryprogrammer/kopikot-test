@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const config = {
     entry: {
@@ -13,15 +14,20 @@ const config = {
     module: {
         rules: [
             {test: /\.jsx?/, use: "babel-loader", exclude: /node_modules/},
-            {test: /\.html$/, loader: 'raw-loader'}
+            {test: /\.html$/, loader: "raw-loader"},
+            {
+                test: /\.(sass|scss)$/,
+                exclude: /node_modules/,
+                loader: "style-loader!css-loader!sass-loader?sourceMap=true?outputStyle=:compressed"
+            },
         ]
     },
     plugins: [
-        new webpack.NoEmitOnErrorsPlugin()
+        new webpack.NoEmitOnErrorsPlugin(),
     ],
     devServer: {
         compress: true,
-        contentBase: path.join(__dirname),
+        contentBase: path.resolve(__dirname),
     }
 };
 

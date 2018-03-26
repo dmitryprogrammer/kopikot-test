@@ -1,10 +1,9 @@
-import template from "./wrap.component.tpl.html";
-import controller from "./wrap.component.ctrl";
+import template from "./app.component.tpl.html";
+import controller from "./app.component.ctrl";
 
 export default {
     template,
     controller,
-    controllerAs: "wrap",
     bindings: {
         formAction: "@",
         buttonFormAction: "@",
