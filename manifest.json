@@ -1,0 +1,22 @@
+{
+  "manifest_version": "2",
+  "name": "Kopikot",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "bg.js"
+    ]
+  },
+  "permissions": [
+    "http://*.google.com/",
+    "https://*.google.com/"
+  ],
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "default.png",
+    "default_popup": "popup.html"
+  }
+}
