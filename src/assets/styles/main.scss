@@ -2,3 +2,29 @@
     width: 980px;
     margin: 20px auto;
 }
+
+.catalog-item-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.catalog-image-part {
+    $s: 150px;
+    width: $s;
+    height: $s;
+    display: flex;
+    overflow: hidden;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.catalog-content-part {
+    padding: 0 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+}

@@ -3,10 +3,5 @@ import controller from "./app.component.ctrl";
 
 export default {
     template,
-    controller,
-    bindings: {
-        formAction: "@",
-        buttonFormAction: "@",
-        csrf: "@"
-    }
+    controller
 }
