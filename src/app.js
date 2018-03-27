@@ -1,6 +1,6 @@
 import angular from "angular";
 /** styles */
-import './assets/styles/main.scss';
+import "./assets/styles/main.scss";
 /** components */
 import appComponent from "./components/app/app.component";
 import catalogItemComponent from "./components/catalog-item/catalog-item.component";
@@ -17,5 +17,5 @@ angular.module("app", [])
 
 /** автоматическая инициализация главного модуля */
 angular.element(document).ready(function () {
-    angular.bootstrap(document, ['app']);
+    angular.bootstrap(document, ["app"]);
 });
