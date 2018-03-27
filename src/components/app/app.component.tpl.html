@@ -2,4 +2,6 @@
     <div ng-if="$ctrl.catalogsList">
         <catalog-item ng-repeat="catalog in $ctrl.catalogsList" item-data="catalog"></catalog-item>
     </div>
+
+    <a ng-click="$ctrl.loadMore($event)" class="load-more-btn" ng-bind="$ctrl.loadMoreBtnText"></a>
 </div>
